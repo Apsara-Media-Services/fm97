@@ -1,16 +1,56 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Lato:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  * {
+    font-family: "Battambang", "Lato";
+  }
+  .block-title {
+    @apply bg-slate-200 text-center text-3xl leading-10 font-bold py-10 px-5 mb-5 shadow-md;
+  }
+  .badge {
+    @apply text-white text-xs px-3 py-1 rounded-md;
+  }
+  .event-title {
+    @apply mt-2 text-xl font-bold;
+  }
+  .desc {
+    @apply block text-zinc-800 leading-7 mb-3;
+  }
+  .date-time {
+    @apply flex gap-3 text-sm my-2;
+  }
+  .btn-listen {
+    @apply flex gap-2 px-6 py-2 rounded-lg items-center text-white ease-in duration-300 hover:drop-shadow-xl w-fit;
+  }
+  .list-next li {
+    @apply py-5 border-b border-slate-200;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.badge {
+  background-color: rgb(195 28 32);
 }
-
-* {
-  box-sizing: border-box;
+.btn-listen {
+  background: linear-gradient(140deg, #d21a16, #28398d);
+}
+#app {
+  margin-top: 0;
+  /* position: absolute;
+	bottom: 0; */
+  width: 100%;
+}
+#app h1,
+#app a {
+  display: none;
+}
+.container {
+  @apply my-0;
+}
+#app .plyr__controls {
+  @apply bg-stone-200 rounded-sm;
+  /* background: none; */
+  padding: 0%;
 }

@@ -11,6 +11,8 @@ import Hls from "hls.js";
 import Plyr from "plyr";
 import "plyr/dist/plyr.css";
 
+const radioLogo = "/fm97-youth-logo.png";
+
 export default function Home({
   programs,
   currentProgram,
@@ -45,8 +47,12 @@ export default function Home({
         <title>The Voice of Our Youth</title>
         <meta
           name="description"
-          content="កម្មវិធីផ្សាយប្រចាំថ្ងៃរបស់វិទ្យុសំលេងយុវជន FM 97MHz  | ព័ត៌មានពិត អប់រំ កម្សាន្ត និងចំណេះដឹង"
+          content="កម្មវិធីផ្សាយប្រចាំថ្ងៃរបស់វិទ្យុសំលេងយុវជន FM 97MHz | ព័ត៌មានពិត អប់រំ កម្សាន្ត និងចំណេះដឹង"
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="The Voice of Our Youth" />
+        <meta property="og:site_name" content="AMS Radio FM97" />
+        <meta property="og:image" content={radioLogo} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Script id="matomo">
@@ -67,26 +73,21 @@ export default function Home({
       <main className={styles.main}>
         <section className="block-title flex items-center justify-center flex-col gap-2">
           <div className="flex items-center justify-center gap-3">
-            <span className="md:hidden flex items-center">
+            <span className="flex items-center h-14 w-14 md:h-20 md:w-20 relative">
               <Image
-                src="/radio-fm97.jpeg"
+                src={radioLogo}
                 alt="radio logo"
-                width={"80px"}
-                height={"80px"}
-                className="rounded-lg"
-              />
-            </span>
-            <span className="hidden sm:flex items-center">
-              <Image
-                src="/radio-fm97.jpeg"
-                alt="radio logo"
+                layout="fill"
                 width={"60px"}
                 height={"60px"}
-                className="rounded-lg"
-              />{" "}
+                objectFit="cover"
+                className="rounded-lg "
+              />
             </span>
             <div>
-              <div>Listen VOY</div>
+              <div className="text-base md:text-xl lg:text-2xl">
+                Listen to AMS Radio FM97
+              </div>
               <div className="text-sm">The Voice of Our Youth</div>
             </div>
           </div>

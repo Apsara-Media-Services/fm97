@@ -53,7 +53,78 @@ export default function Home({
         <meta property="og:title" content="The Voice of Our Youth" />
         <meta property="og:site_name" content="AMS Radio FM97" />
         <meta property="og:image" content={radioLogo} />
+        <meta name="theme-color" content="#ffffff" />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="57x57"
+          href="/apple-icon-57x57.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="60x60"
+          href="/apple-icon-60x60.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="/apple-icon-72x72.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="76x76"
+          href="/apple-icon-76x76.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="114x114"
+          href="/apple-icon-114x114.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="120x120"
+          href="/apple-icon-120x120.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="/apple-icon-144x144.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="/apple-icon-152x152.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-icon-180x180.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/android-icon-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/favicon-96x96.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <Script id="matomo">
         {`
@@ -71,9 +142,9 @@ export default function Home({
         `}
       </Script>
       <main className={styles.main}>
-        <section className="block-title flex items-center justify-center flex-col gap-2">
+        <section className="block-title">
           <div className="flex items-center justify-center gap-3">
-            <span className="flex items-center h-14 w-14 md:h-20 md:w-20 relative">
+            <span className="flex items-center h-14 w-14 md:h-18 md:w-18 relative">
               <Image
                 src={radioLogo}
                 alt="radio logo"
@@ -98,7 +169,7 @@ export default function Home({
             <div className="container mx-auto px-3 sm:px-4 py-4 bg-slate-50 rounded-t-md">
               {(currentProgram || nextProgram) && (
                 <>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div className="bg-cover bg-slate-100 w-full">
                       <ImageWithFallback
                         src={`${apiBaseUrl}${

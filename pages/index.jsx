@@ -1,6 +1,3 @@
-import Head from "next/head";
-import Script from "next/script";
-import styles from "../styles/Home.module.css";
 import axios from "axios";
 import { map, find, lowerCase } from "lodash";
 import * as moment from "moment";
@@ -43,105 +40,7 @@ export default function Home({
 
   return (
     <>
-      <Head>
-        <title>The Voice of Our Youth</title>
-        <meta
-          name="description"
-          content="កម្មវិធីផ្សាយប្រចាំថ្ងៃរបស់វិទ្យុសំលេងយុវជន FM 97MHz | ព័ត៌មានពិត អប់រំ កម្សាន្ត និងចំណេះដឹង"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="The Voice of Our Youth" />
-        <meta property="og:site_name" content="AMS Radio FM97" />
-        <meta property="og:image" content={radioLogo} />
-        <meta name="theme-color" content="#ffffff" />
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="57x57"
-          href="/apple-icon-57x57.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="60x60"
-          href="/apple-icon-60x60.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="72x72"
-          href="/apple-icon-72x72.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="76x76"
-          href="/apple-icon-76x76.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="114x114"
-          href="/apple-icon-114x114.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="120x120"
-          href="/apple-icon-120x120.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="144x144"
-          href="/apple-icon-144x144.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="152x152"
-          href="/apple-icon-152x152.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-icon-180x180.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="192x192"
-          href="/android-icon-192x192.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="96x96"
-          href="/favicon-96x96.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/manifest.json" />
-      </Head>
-      <Script id="matomo">
-        {`
-            var _paq = window._paq = window._paq || [];
-            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-            _paq.push(['trackPageView']);
-            _paq.push(['enableLinkTracking']);
-            (function() {
-            var u="//analytics.ams.com.kh/";
-            _paq.push(['setTrackerUrl', u+'matomo.php']);
-            _paq.push(['setSiteId', '8']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-            })();
-        `}
-      </Script>
-      <main className={styles.main}>
+      <main>
         <section className="block-title">
           <div className="flex items-center justify-center gap-3">
             <span className="flex items-center h-14 w-14 md:h-18 md:w-18 relative">
@@ -149,8 +48,6 @@ export default function Home({
                 src={radioLogo}
                 alt="radio logo"
                 layout="fill"
-                width={"60px"}
-                height={"60px"}
                 objectFit="cover"
                 className="rounded-lg "
               />
@@ -170,7 +67,7 @@ export default function Home({
               {(currentProgram || nextProgram) && (
                 <>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <div className="bg-cover bg-slate-100 w-full">
+                    <div className="bg-slate-100 w-full">
                       <ImageWithFallback
                         src={`${apiBaseUrl}${
                           currentProgram.program?.thumbnail?.url || ""

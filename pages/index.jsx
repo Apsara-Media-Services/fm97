@@ -54,7 +54,7 @@ export default function Home({
             </span>
             <div>
               <div className="text-base md:text-xl lg:text-2xl">
-                Listen to AMS Radio FM97
+                ស្តាប់វិទ្យុសំឡេងយុវជន ៩៧
               </div>
               <div className="text-sm">The Voice of Our Youth</div>
             </div>

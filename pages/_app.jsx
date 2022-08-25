@@ -39,11 +39,12 @@ export default function MyApp({ Component, pageProps }) {
         />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
         <meta name="theme-color" content="#317EFB" />
-        <Script
+        {/* <Script
             strategy="lazyOnload"
             data-website-id="fc69046d-d2b0-4f87-9f6e-26f052ec064b"
             src="https://status.amskh.co/umami.js"
-        />
+        /> */}
+        <script type="text/javascript" data-website-id="fc69046d-d2b0-4f87-9f6e-26f052ec064b" src="https://status.amskh.co/umami.js"></script>
       </Head>
       <Component {...pageProps} />
     </>

@@ -211,9 +211,11 @@ function convertDateTimeToTimestamp(datetime) {
 export async function getServerSideProps() {
   const currentDayName = lowerCase(moment().format("dddd"));
 
-  const { data: todaySchedule } = await axios.get(
-    `${process.env.API_BASE_URL}/schedules/${currentDayName}`
+  const { data: schedules } = await axios.get(
+    `${process.env.API_BASE_URL}/schedules`
   );
+
+  const todaySchedule = find(schedules, ["slug", currentDayName]);
 
   const programs = map(todaySchedule.programs, (program) => {
     const currentDate = moment().format("YYYY-MM-DD");

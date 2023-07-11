@@ -3,6 +3,7 @@ const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
 
 module.exports = withPWA({
+  output: 'standalone',
   pwa: {
     dest: "public",
     runtimeCaching,
@@ -14,6 +15,7 @@ module.exports = withPWA({
       "fm97.ams.com.kh",
       "localhost:1337",
       "api.ams.com.kh",
+      "next.sovichetra.com",
     ],
   },
 });

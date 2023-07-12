@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps }) {
         />
         <meta
           name="description"
-          content="កម្មវិធីផ្សាយប្រចាំថ្ងៃរបស់វិទ្យុសំលេងយុវជន FM 97MHz | ព័ត៌មានពិត អប់រំ កម្សាន្ត និងចំណេះដឹង"
+          content="កម្មវិធីផ្សាយប្រចាំថ្ងៃរបស់វិទ្យុសំលេងយុវជន ៩៧ | ព័ត៌មានពិត អប់រំ កម្សាន្ត និងចំណេះដឹង"
         />
         <meta name="keywords" content="Keywords" />
         <meta property="og:type" content="website" />

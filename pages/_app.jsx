@@ -18,11 +18,11 @@ export default function MyApp({ Component, pageProps }) {
         />
         <meta name="keywords" content="Keywords" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="The Voice of Our Youth" />
+        <meta property="og:title" content="វិទ្យុសំលេងយុវជន៩៧" />
         <meta property="og:site_name" content="AMS Radio FM97" />
         <meta property="og:image" content={radioLogo} />
         <meta name="theme-color" content="#ffffff" />
-        <title>The Voice of Our Youth</title>
+        <title>វិទ្យុសំលេងយុវជន៩៧</title>
 
         <link rel="manifest" href="/manifest.json" />
         <link

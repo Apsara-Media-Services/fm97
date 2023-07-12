@@ -13,6 +13,7 @@ module.exports = withPWA({
       "localhost",
       "ams.com.kh",
       "fm97.ams.com.kh",
+      "admin.amskh.co",
       "localhost:1337",
       "api.ams.com.kh",
       "next.sovichetra.com",

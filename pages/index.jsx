@@ -170,7 +170,7 @@ export default function Home({
 
               <div className="list-event pt-10 pb-4">
                 <h3 className="list-title text-xl md:text-3xl font-bold border-b pb-4">
-                  កម្មវិធីផ្សាយប្រចាំថ្ងៃ <small>(ម៉ោងកម្ពុជា)</small>
+                  កម្មវិធីផ្សាយប្រចាំថ្ងៃ <small>(ម៉ោងនៅកម្ពុជា)</small>
                 </h3>
                 <ul className="list-next sm:grid md:grid-cols-3 lg:grid-cols-4">
                   {programs.map((item) => (
